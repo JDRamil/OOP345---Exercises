@@ -11,16 +11,15 @@ namespace seneca {
 class FoodOrder {
     char  m_name[10]{};
     char* m_desc{nullptr};
-    double m_price{0.0};
-    bool   m_dailySpecial{false};
+    double m_price{};
+    bool m_dailySpecial{};
 
 public:
     FoodOrder();
-    FoodOrder(const FoodOrder& src);
-    FoodOrder& operator=(const FoodOrder& src);
-    FoodOrder(FoodOrder&& src) noexcept;
-    FoodOrder& operator=(FoodOrder&& src) noexcept;
     ~FoodOrder();
+
+    FoodOrder(const FoodOrder&);
+    FoodOrder& operator=(const FoodOrder&);
 
     void read(std::istream& in);
     void display() const;
