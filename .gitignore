@@ -1,0 +1,9 @@
+﻿.vs/
+*.exe
+*.obj
+*.ipch
+*.suo
+*.wsuo
+*.sqlite
+*.tmp
+*~*.TMP
