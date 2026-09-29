@@ -13,4 +13,7 @@ namespace seneca
 		os << std::setw(20) << p.getKey() << ": " << p.getValue();
 		return os;
 	}
+
+	template<>
+	Pair Collection<Pair, 100>::stat{ "No Key", "No Value" };
 }
