@@ -36,8 +36,10 @@ namespace seneca
 	// Specialization: for a Collection<Pair, 100> (i.e. the one used by
 	// Set<Pair>), the "no such element" default object should be a
 	// ("No Key", "No Value") pair instead of an empty one.
+	// (Only declared here; defined once in Pair.cpp to avoid duplicate
+	// symbols on compilers without C++17 inline variables.)
 	template<>
-	inline Pair Collection<Pair, 100>::stat{ "No Key", "No Value" };
+	Pair Collection<Pair, 100>::stat;
 }
 
 #endif
